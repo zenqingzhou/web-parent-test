@@ -39,4 +39,17 @@ public class TestController {
     public JSONObject queryJson(@ApiParam(value = "id",required = true) @Valid @RequestParam(value = "id") Integer id){
         return testService.queryJson(id);
     }
+
+    @ApiOperation(value = "测试es", nickname = "测试es", response = JSONObject.class, tags = {"测试"})
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK", response = JSONObject.class),
+            @ApiResponse(code = 201, message = "Created", response = JSONObject.class),
+            @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 404, message = "Not Found")
+    })
+    @GetMapping(value = "/esTest",produces = {"application/json"})
+    public String esTest(){
+        return testService.esTest();
+    }
 }

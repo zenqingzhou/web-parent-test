@@ -10,4 +10,6 @@ public interface TestService {
     String queryText(String prams);
 
     JSONObject queryJson(Integer id);
+
+    String esTest();
 }

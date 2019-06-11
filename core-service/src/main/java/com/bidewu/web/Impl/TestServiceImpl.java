@@ -50,4 +50,11 @@ public class TestServiceImpl implements TestService {
         String result = JSON.toJSONString(jdoc);
         return JSON.parseObject(result);
     }
+
+    @Override
+    public String esTest() {
+        return null;
+    }
+
+
 }
