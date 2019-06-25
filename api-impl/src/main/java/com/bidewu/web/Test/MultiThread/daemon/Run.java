@@ -1,4 +1,6 @@
-package com.bidewu.web.Test.MultiThread.Deamon;
+package com.bidewu.web.Test.MultiThread.daemon;
+
+import java.lang.management.ManagementFactory;
 
 /**
  * Created by zengqingzhou on 2019/6/14.
@@ -6,6 +8,9 @@ package com.bidewu.web.Test.MultiThread.Deamon;
 public class Run {
     public static void main(String[] args) {
         try {
+
+            String name = ManagementFactory.getRuntimeMXBean().getName();
+            System.out.println(name.split("@")[0]);
             MyThread thread = new MyThread();
             thread.setDaemon(true);
             thread.start();

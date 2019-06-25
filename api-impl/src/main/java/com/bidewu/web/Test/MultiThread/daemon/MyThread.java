@@ -1,4 +1,4 @@
-package com.bidewu.web.Test.MultiThread.Deamon;
+package com.bidewu.web.Test.MultiThread.daemon;
 
 /**
  * Created by zengqingzhou on 2019/6/14.
