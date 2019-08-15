@@ -20,4 +20,6 @@ public interface ApiMapper{
     int updateByExampleSelective(@Param("record") Api record, @Param("example") ApiExample example);
 
     int updateByExample(@Param("record") Api record, @Param("example") ApiExample example);
+
+    Api insertTest(@Param("jdoc") Object jdoc);
 }

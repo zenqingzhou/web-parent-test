@@ -6,6 +6,6 @@ import lombok.Data;
 public class Api {
     private Integer id;
 
-    private Object jdoc;
+    private Integer jdoc;
 
 }

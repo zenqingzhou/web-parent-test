@@ -18,52 +18,52 @@ public class DruidConfig {
 
     private Logger logger = LoggerFactory.getLogger(DruidConfig.class);
 
-    @Value("${bidewu.database.driverClass}")
+    @Value("${bidewu.database.pg.driverClass}")
     private String driverClass;
 
-    @Value("${bidewu.database.url}")
+    @Value("${bidewu.database.pg.url}")
     private String pgUrl;
 
-    @Value("${bidewu.database.user}")
+    @Value("${bidewu.database.pg.user}")
     private String user;
 
-    @Value("${bidewu.database.password}")
+    @Value("${bidewu.database.pg.password}")
     private String password;
 
-    @Value("${bidewu.database.dbIinitialSize}")
+    @Value("${bidewu.database.pg.dbIinitialSize}")
     private int initialSize;
 
-    @Value("${bidewu.database.dbMinIdle}")
+    @Value("${bidewu.database.pg.dbMinIdle}")
     private int minIdle;
 
-    @Value("${bidewu.database.dbMaxActive}")
+    @Value("${bidewu.database.pg.dbMaxActive}")
     private int maxActive;
 
-    @Value("${bidewu.database.maxWait}")
+    @Value("${bidewu.database.pg.maxWait}")
     private int maxWait;
 
-    @Value("${bidewu.database.timeBetweenEvictionRunsMillis}")
+    @Value("${bidewu.database.pg.timeBetweenEvictionRunsMillis}")
     private int timeBetweenEvictionRunsMillis;
 
-    @Value("${bidewu.database.minEvictableIdleTimeMillis}")
+    @Value("${bidewu.database.pg.minEvictableIdleTimeMillis}")
     private int minEvictableIdleTimeMillis;
 
-    @Value("${bidewu.database.validationQuery}")
+    @Value("${bidewu.database.pg.validationQuery}")
     private String validationQuery;
 
-    @Value("${bidewu.database.testWhileIdle}")
+    @Value("${bidewu.database.pg.testWhileIdle}")
     private boolean testWhileIdle;
 
-    @Value("${bidewu.database.testOnBorrow}")
+    @Value("${bidewu.database.pg.testOnBorrow}")
     private boolean testOnBorrow;
 
-    @Value("${bidewu.database.testOnReturn}")
+    @Value("${bidewu.database.pg.testOnReturn}")
     private boolean testOnReturn;
 
-    @Value("${bidewu.database.poolPreparedStatements}")
+    @Value("${bidewu.database.pg.poolPreparedStatements}")
     private boolean poolPreparedStatements;
 
-    @Value("${bidewu.database.filters}")
+    @Value("${bidewu.database.pg.filters}")
     private String filters;
 
     @Bean(name = "datasourceWeb")

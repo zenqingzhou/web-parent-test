@@ -36,7 +36,7 @@ public class TestController {
             @ApiResponse(code = 404, message = "Not Found")
     })
     @GetMapping(value = "/queryJson",produces = {"application/json"})
-    public JSONObject queryJson(@ApiParam(value = "id",required = true) @Valid @RequestParam(value = "id") Integer id){
+    public Integer queryJson(@ApiParam(value = "id",required = true) @Valid @RequestParam(value = "id") Integer id){
         return testService.queryJson(id);
     }
 

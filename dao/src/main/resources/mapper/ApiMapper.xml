@@ -85,7 +85,7 @@
     insert into api (id, jdoc)
     values (#{id,jdbcType=INTEGER}, #{jdoc,jdbcType=OTHER})
   </insert>
-  <insert id="insertSelective" parameterType="com.bidewu.web.dao.entity.Api" >
+  <insert id="insertSelective" parameterType="com.bidewu.web.dao.entity.Api"  useGeneratedKeys="true" keyProperty="id">
     insert into api
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -104,7 +104,10 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.bidewu.web.dao.entity.ApiExample" resultType="java.lang.Integer" >
+    <insert id="insertTest">
+      INSERT INTO api(jdoc) VALUES ('{"key1":[1,2,4,["a","b","c"]],"key2":[2,5,7,["a","d","e"]]}') RETURNING id
+    </insert>
+    <select id="countByExample" parameterType="com.bidewu.web.dao.entity.ApiExample" resultType="java.lang.Integer" >
     select count(*) from api
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
