@@ -1,7 +1,6 @@
 package com.bidewu.web.Test;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -31,9 +30,9 @@ public class Test {
 //            list.add(1);
 //            System.out.println(Thread.currentThread().getName()+list.size());
 //        },"B").start();
-        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap;
-        concurrentHashMap.put(1,2);
-        HashMap map =  new HashMap<>();
-        map.put(1,1);
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+        concurrentHashMap.put(1, 2);
+        HashMap map = new HashMap<>();
+        map.put(1, 1);
     }
 }
