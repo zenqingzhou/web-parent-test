@@ -56,8 +56,16 @@
             <artifactId>jcip-annotations</artifactId>
             <version>1.0</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.6.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>sdk-java</artifactId>
+            <version>2.3.0</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>

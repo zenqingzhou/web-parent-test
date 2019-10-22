@@ -10,6 +10,7 @@ public class Run {
             ThreadB b = new ThreadB();
             ThreadA a = new ThreadA(b);
             a.start();
+            a.join();
             b.start();
             b.join(2000);
 //            c.start();
